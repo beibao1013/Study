@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+/*利用padding与margin实现等高，父元素要有overflow:hidden属性；*/
+        .box{
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .box .green{
+            float: left;
+            background-color: green;
+            resize: vertical;  /*用户可调整元素高度*/
+        }
+
+        .box .orange{
+            float: left;
+            background-color: orange;
+            margin-bottom: -60px;
+            padding-bottom: 60px;
+            resize: vertical;
+        }
+
+        .clear{
+            clear:both;
+        }
+
+        .self{
+            width: 100%;
+        }
+
+        .left{
+            float: right;
+            width: 300px;
+            background-color: red;
+            height: 300px;
+            margin-left: 20px;
+        }
+
+        .right{
+            float: left;
+            width: 100%;
+            height: 300px;
+            background-color: pink;
+            margin-left: -320px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="green">
+            <ul>
+                <li>绿色</li>
+                <li>绿色</li>
+                <li>绿色</li>
+            </ul>
+        </div>
+        <div class="orange">
+            <ul>
+                <li>黄色</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!-- margina实现两栏自适应布局： -->
+    <div class="self">
+       <div class="left">
+            <p>文字</p>
+        </div>
+        <div class="right">
+            <p>22222</p>
+        </div>
+    </div>
+</body>
+</html>
